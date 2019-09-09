@@ -22,7 +22,7 @@ public class UserRepositoryTest {
     public void testStoreUser() {
         HashSet<UserRole> roles = new HashSet<>();
         roles.add(UserRole.OFFICER);
-        User user = repository.save(new User(UUID.randomUUID(),
+        User user = repository.save(new User(repository.nextId(),
                 "alex.foley@beverly-hills.com",
                 "my-secret-pwd",
                 roles));
