@@ -5,6 +5,7 @@ import com.example.orm.jpa.AbstractEntityId;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.Collections;
 import java.util.Set;
 import java.util.UUID;
 
@@ -40,5 +41,13 @@ public class User extends AbstractEntity<UserId> {
 
     public Set<UserRole> getRoles() {
         return roles;
+    }
+
+    public static User createCaptain(UserId userId, String email, String password) {
+        return new User(userId, email, password, Collections.singleton(UserRole.CAPTAIN));
+    }
+
+    public static User createOfficer(UserId userId, String email, String password) {
+        return new User(userId, email, password, Collections.singleton(UserRole.OFFICER));
     }
 }
