@@ -1,4 +1,4 @@
-package com.example.copsboot.security;
+package com.example.copsboot.infrastructure.security;
 
 import com.example.copsboot.user.User;
 import com.example.copsboot.user.UserRepository;
