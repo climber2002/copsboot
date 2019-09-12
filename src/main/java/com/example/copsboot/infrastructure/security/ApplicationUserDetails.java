@@ -9,7 +9,7 @@ import java.util.Collection;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-public class ApplicationUserDetails extends org.springframework.security.core. userdetails.User {
+public class ApplicationUserDetails extends org.springframework.security.core.userdetails.User {
 
     private static final String ROLE_PREFIX = "ROLE_";
     private final UserId userId;
